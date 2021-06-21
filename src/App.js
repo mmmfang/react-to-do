@@ -1,12 +1,14 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import ToDoItem from './components/ToDoItem'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Removing boilerplate</p>
-      </header>
+    <div>
+        <ToDoItem />
+        <ToDoItem />
+        <ToDoItem />
+        <ToDoItem />
     </div>
   );
 }
