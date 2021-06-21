@@ -4,11 +4,13 @@ import ToDoItem from './components/ToDoItem'
 
 function App() {
   return (
-    <div>
+    <div className="App-header">
+      <div className="to-do-list-bg">
         <ToDoItem />
         <ToDoItem />
         <ToDoItem />
         <ToDoItem />
+      </div>
     </div>
   );
 }
