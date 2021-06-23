@@ -7,8 +7,9 @@ function App() {
   const toDosArray = todosData.map(todo => 
     <ToDoItem
       key = {todo.id}
-      text = {todo.text}
-      completed = {todo.completed}
+      todo = {todo}
+      // text = {todo.text}
+      // completed = {todo.completed}
     />)
   return (
     <div className="App-header">
