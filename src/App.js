@@ -6,9 +6,15 @@ import todosData from './todosData.js'
 
 class App extends Component {
 
+  constructor() {
+    super();
+    this.state = {
+      todos: todosData
+    }
+  }
   render(){
 
-    const toDosArray = todosData.map(todo => 
+    const toDosArray = this.state.todos.map(todo => 
       <ToDoItem
         key = {todo.id}
         todo = {todo}
