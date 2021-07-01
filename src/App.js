@@ -1,4 +1,3 @@
-//import logo from './logo.svg';
 import {Component} from 'react';
 import './App.css';
 import ToDoItem from './components/ToDoItem'
@@ -11,15 +10,19 @@ class App extends Component {
     this.state = {
       todos: todosData
     }
+    this.handleChange = this.handleChange.bind(this);
   }
-  render(){
 
+  handleChange(){
+    console.log('im changing')
+  }
+
+  render(){
     const toDosArray = this.state.todos.map(todo => 
       <ToDoItem
         key = {todo.id}
         todo = {todo}
-        // text = {todo.text}
-        // completed = {todo.completed}
+        handleChange = {this.handleChange}
       />)
 
     return (
