@@ -13,8 +13,16 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(){
-    console.log('im changing')
+  handleChange(id){
+    this.setState(prevState => {
+      const newTodos = prevState.todos.map(todo => {
+        if (todo.id === id) {
+          return {...todo, completed: !todo.completed}
+        }
+        return todo; 
+      })
+      return {todos : newTodos}; 
+    })
   }
 
   render(){
