@@ -7,9 +7,8 @@ function ToDoItem(props) {
                 type="checkbox" 
                 onChange={()=>props.handleChange(props.todo.id)} 
                 checked={props.todo.completed}/>
-            <p>{props.todo.text}</p>
-        </div>
-    )
+            <p style={props.todo.completed ? {color: "grey",textDecoration:"line-through"} : null}>{props.todo.text}</p>
+        </div>)
 }
 
 export default ToDoItem
